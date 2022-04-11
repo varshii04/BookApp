@@ -60,22 +60,20 @@ section{
   
   /* Style the search box inside the navigation bar */
   .topnav input[type=text] {
-    float: right;
-    padding: 6px;
+    padding: 8px;
     border: none;
-    margin-top: 8px;
-    margin-right: 16px;
+    margin-left: 25%;
     font-size: 17px;
   }
-  .topnav .search-container {
-    float: right;
-  }
+  /* .topnav .search-container {
+    margin: auto;
+
+  } */
   
   .topnav .search-container button {
-    float: right;
+    margin: auto;
     padding: 6px;
-    margin-top: 8px;
-    margin-right: 16px;
+
     background: #ddd;
     font-size: 17px;
     border: none;
@@ -84,4 +82,64 @@ section{
   
   .topnav .search-container button:hover {
     background: #ccc;
+  }
+  /* .topnav .search-container .btn mt-5 {
+    margin-left: 85%;
+    margin: auto;
+
+    
+
+  } */
+  /* .topnav .log1{
+    padding: 6px;
+    margin-left: 85%;
+
+
+  } */
+ 
+
+  .b1{
+    margin-right: 14px;
+
+  }
+  .b2{
+    margin-left: 14px;
+
+  }
+  
+  .container1{
+    margin-left: 4px;
+
+  }
+  .text-card-title {
+    font-size: 0.9rem;
+    font-family: "Comfoorta-Bold";
+  }
+  .text-blue {
+    color: #62add7;
+  }
+  .text-title {
+    font-size: 1.3rem;
+  }
+  .text-card-text,
+  .card-button-text {
+    font-size: 0.9rem;
+    color: #403e3e;
+    font-family: "Comfoorta-Light";
+  }
+  .card-button-text {
+    background-color: #62add7;
+    border: #62add7;
+    font-size: 0.8em;
+    color: #ffffff;
+  }
+  
+  .card-book {
+
+    border:none;
+    
+  }
+  .pb-20 {
+    margin-top: 9rem;
+    margin-bottom: 9rem;
   }

@@ -15,7 +15,7 @@ const routes: Routes = [
     ]},
   { path: 'homepage-component', component: HomepageComponent },
   { path: 'registration-component', component: RegistrationComponent },
-  { path: '',   redirectTo: '/login-component', pathMatch: 'full' }
+  { path: '',   redirectTo: '/homepage-component', pathMatch: 'full' }
 ];
 
 @NgModule({

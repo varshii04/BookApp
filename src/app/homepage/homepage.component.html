@@ -8,13 +8,102 @@
                 <a class="active" href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
-                <div class="search-container">
-                    <form action="/action_page.php">
-                      <input type="text" placeholder="Search.." name="search">
-                      <button type="submit">Submit</button>
-                    </form>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12  text-right">
+                            <button class="b1"  routerLink="/login-component" routerLinkActive="active">Login</button>
+                            <button class="b2"  routerLink="/registration-component" routerLinkActive="active">Sign Up</button>
+
+                            
+                        </div>
+                    </div>
                 </div>
+
+                <!-- <div  > -->
             </div>
+                    <form action="/action_page.php">
+                      
+                      <div class="container">
+                        <div id="title" class="center">
+                          <!-- <h1 id="header" class="text-center mt-5">Book Finder</h1> -->
+                          <div class="row">
+                            <div class="input-group mx-auto col-lg-6 col-md-8 col-sm-12">
+                              
+                                <input type="text" id="username" name="username" #username>
+                                
+                                <button type="button" (click)="onsearch(username.value)">Click me</button>
+                              <!-- <input type="text" placeholder="Search Books"  id="search" />
+                              <button id="searchbutton">Search</button> -->
+
+
+                              
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+
+                        <div class="container pb-20">
+
+                            <div  class="row ">
+                            <div class="col- col-md-12 col-lg-25"  style="border:none">
+                                <div class="card card-book" style="border:none">
+                                    <div class="card-body">
+
+                            <div  *ngFor="let t of details">
+                                <div class="text-center">
+
+                                    <p class="text-title">{{ t.volumeInfo.title }}</p>
+
+                                <!-- <img [src]="t.volumeInfo.imageLinks.smallThumbnail" alt="Image" (click)="t.volumeInfo.infoLink" class="card h-100"> -->
+
+                                <img [src]="t.volumeInfo.imageLinks&&t.volumeInfo.imageLinks.smallThumbnail" alt="Image" class="img-fluid">
+                                </div>
+
+
+                                <div class="text-center">
+
+                                
+                                    <p class="text-card-text">{{ t.volumeInfo.authors }}</p>
+                                    <div class="text-left mb-5">
+                                        <p class="h5">Book Description</p>
+                                      </div>
+                                      <div class="text-left">
+                                        <p class="text-card-text">
+                                          {{ t.volumeInfo.description }}
+                                        </p>
+                                      </div>
+                                    <div class="row">
+                                        <div class="col- col-md-12 col-lg-25">
+                                                                        
+                                    <a href="{{ t.volumeInfo.previewLink }}" class="btn btn-primary mx-2 card-button-text" target="_blank">Read More</a>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                            
+                            </div> 
+
+                                </div>
+                                </div>
+                            </div>
+
+                            </div>
+                        </div>
+
+                            
+
+
+
+                        
+                        
+                      
+                    </form>
+                
+                
+
+                 
+                
+            
             
             
         </section>
@@ -24,8 +113,4 @@
             Privacy @101 company policy
         </footer>
     </main>
-<<<<<<< Updated upstream
 </body>
-=======
-</body>
->>>>>>> Stashed changes
