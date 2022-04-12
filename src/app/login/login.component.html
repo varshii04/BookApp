@@ -1,4 +1,4 @@
-<form class="text-center border border-light p-5">
+<!-- <form class="login">
   <div class="wrapper" >
       <p class="h4 mb-4">Login</p>
       <div [formGroup]="loginform">
@@ -15,9 +15,32 @@
             <small *ngIf="loginform.get('password').errors?.['required']" class="text-danger">Password required*</small>
             </div>
             <div>
-            <button class="btn mt-3" routerLink="/homepage-component" routerLinkActive="active">Login</button>
+            <button class="btn mt-3" routerLink="/homepage-component" routerLinkActive="active">submit</button>
             <a routerLink="/registration-component" routerLinkActive="active">Sign Up</a>
             </div>
           </div>
       </div>
-        </form>
+        </form> -->
+
+        <div class="container">
+          
+          <form #loginform="ngForm" (ngSubmit)="loginUser()">
+            <div class = "form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id = "email" placeholder="Enter email" name = "email" [(ngModel)]="user.emailId">
+        
+            </div>
+            <div class = "form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control" id = "pwd" placeholder="Enter password" name = "password" [(ngModel)]="user.password">
+            </div>
+            <div class = "checkbox">
+              <label><input type = "checkbox" name = "remember"> Remember me</label>
+            </div>
+            <div class="row">
+              <!-- <button type="submit" class = "btn btn-info" routerLink="/homepage-component" routerLinkActive="active">Login</button> -->
+              <button type="submit" class = "btn btn-info" >Login</button>
+              <a routerLink="/registration-component" routerLinkActive="active">Sign Up</a>
+            </div>
+          </form>
+        </div>

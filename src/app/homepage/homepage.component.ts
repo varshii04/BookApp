@@ -20,6 +20,10 @@ export class HomepageComponent implements OnInit {
     //    this.title1=response.items;
     //   console.log(this.title1);
     // });
+    this.http.getBooks().subscribe((response:any)=>{
+      console.log(response),
+      this.details=response.items;
+    });
 
 
   }

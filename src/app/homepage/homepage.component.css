@@ -100,10 +100,13 @@ section{
 
   .b1{
     margin-right: 14px;
+    float:right;
+    margin-left: 2rem;
 
   }
   .b2{
     margin-left: 14px;
+    float:right;
 
   }
   
@@ -111,35 +114,20 @@ section{
     margin-left: 4px;
 
   }
-  .text-card-title {
-    font-size: 0.9rem;
-    font-family: "Comfoorta-Bold";
-  }
-  .text-blue {
-    color: #62add7;
-  }
-  .text-title {
-    font-size: 1.3rem;
-  }
-  .text-card-text,
-  .card-button-text {
-    font-size: 0.9rem;
-    color: #403e3e;
-    font-family: "Comfoorta-Light";
-  }
-  .card-button-text {
-    background-color: #62add7;
-    border: #62add7;
-    font-size: 0.8em;
-    color: #ffffff;
-  }
-  
-  .card-book {
-
-    border:none;
-    
-  }
+ 
   .pb-20 {
     margin-top: 9rem;
     margin-bottom: 9rem;
+  }
+  .input{
+    position: fixed;
+    text-align: center;
+    margin-top: 20px;
+
+  }
+  .details{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 1000px;
+    margin:0 auto;
   }

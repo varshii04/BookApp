@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-
+import { MatButtonModule } from '@angular/material/button'
 import { HomepageComponent } from './homepage/homepage.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,9 +20,8 @@ import { DataserviceService } from './dataservice.service';
   declarations: [
     AppComponent,
     LoginComponent,
-    
     HomepageComponent,
-         RegistrationComponent
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +30,9 @@ import { DataserviceService } from './dataservice.service';
     BrowserAnimationsModule,
     MatIconModule,
     HttpClientModule,
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [DataserviceService],
   bootstrap: [AppComponent]
