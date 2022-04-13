@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { FormGroup, FormControl } from '@angular/forms';
+import { DataserviceService } from '../dataservice.service';
 
 @Component({
   selector: 'app-registration',
@@ -10,7 +11,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class RegistrationComponent implements OnInit {
 
   title = 'registration';
-  constructor(private reg:FormBuilder){}
+  constructor(private reg:FormBuilder,private _service:DataserviceService){}
     registrationForm=this.reg.group({
       Name1:['',[Validators.required,Validators.pattern(/[a-zA-Z][a-zA-Z ]/)]],
       password:['',[Validators.required,Validators.pattern(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,}$/)]],
@@ -41,5 +42,7 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  
 
 }

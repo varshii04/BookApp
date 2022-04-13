@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 import { Http } from '@angular/http';
 import { User } from './user';
+import { Favourite } from './favourite';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +31,10 @@ export class DataserviceService {
 }
 public loginUserFromRemote(user:User):Observable<any>{
   return this._http.post<any>("http://localhost:8092/login",user)
+}
+
+public addFavList(favourite:Favourite):Observable<any>{
+  return this._http.post<any>("http://localhost:8092/favlist",favourite)
 }
 
 }

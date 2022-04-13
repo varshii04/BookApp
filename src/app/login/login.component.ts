@@ -32,9 +32,9 @@ export class LoginComponent implements OnInit {
   }
   loginUser(){
     this._service.loginUserFromRemote(this.user).subscribe(
-      data => console.log("response",data),
-      error => console.log("error message")
-    );
+      data => console.log("response received"),
+      error => console.log("excepton occured")
+    )
   }
 
 }

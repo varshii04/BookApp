@@ -75,6 +75,7 @@
                                         <div>
                                                                         
                                     <a href="{{ t.volumeInfo.previewLink }}" mat-stroked-button color="primary" target="_blank">Read More</a>
+                                    <button (click)="addFav()">Add to Fav</button>
                                         </div>
                                     </div>
                                 
@@ -88,6 +89,19 @@
 
                             </div>
                         </div>
+                        <div class="parent"  *ngFor="let t of details">
+                            <div class="div1">
+                              {{ t.volumeInfo.title }} <img [src]="t.volumeInfo.imageLinks&&t.volumeInfo.imageLinks.smallThumbnail" alt="Image" class="img-fluid">
+                              {{ t.volumeInfo.authors }} 
+                              <p class="text">
+                                <!-- {{ t.volumeInfo.description }} -->
+                                <a href="{{ t.volumeInfo.previewLink }}" mat-stroked-button color="primary" target="_blank">Read More</a>
+                                
+                              </p> 
+                            </div>
+                            
+                            </div>
+                            <div class="div2"> </div>
                         
                           
                     </form>
