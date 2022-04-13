@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Response } from '@angular/http';
+import { Router } from '@angular/router';
 import { DataserviceService } from '../dataservice.service';
 import { Favourite } from '../favourite';
 
@@ -14,7 +15,7 @@ export class HomepageComponent implements OnInit {
   public title1: string;
   favourite = new Favourite();
 
-  constructor(private http:DataserviceService) { }
+  constructor(private http:DataserviceService,private _router : Router) { }
   ngOnInit(): void {
 
     // this.http.searchbookdata().subscribe((response:any)=>{
@@ -39,9 +40,9 @@ export class HomepageComponent implements OnInit {
    }
    addFav(){
     this.http.addFavList(this.favourite).subscribe(
-      (response:any)=> console.log("response received"),
-      error => console.log("excepton occured")
-    );
+      data =>{ console.log("response received");},
+      _error => console.log("excepton occured")
+      )
    }
 
   

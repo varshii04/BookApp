@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 import { Http } from '@angular/http';
 import { User } from './user';
 import { Favourite } from './favourite';
+import { Register } from './register';
 
 @Injectable({
   providedIn: 'root'
@@ -30,11 +31,15 @@ export class DataserviceService {
   return this._http.get(`${this.api}?q=:keyes&key=${this.apikey}+&limit=10`);
 }
 public loginUserFromRemote(user:User):Observable<any>{
-  return this._http.post<any>("http://localhost:8092/login",user)
+  
+  return this._http.post<any>("http://localhost:8095/login", user)
+}
+public registerUserFromRemote(register:Register):Observable<any>{
+  return this._http.post<any>("http://localhost:8095/registeruser",register)
 }
 
 public addFavList(favourite:Favourite):Observable<any>{
-  return this._http.post<any>("http://localhost:8092/favlist",favourite)
+  return this._http.post<any>("http://localhost:8095/favlist",favourite)
 }
 
 }

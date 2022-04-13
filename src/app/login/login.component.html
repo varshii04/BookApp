@@ -24,10 +24,10 @@
 
         <div class="container">
           
-          <form #loginform="ngForm" (ngSubmit)="loginUser()">
+          <form #loginform="ngForm" (ngSubmit)="loginUser(loginform)">
             <div class = "form-group">
               <label for="email">Email:</label>
-              <input type="email" class="form-control" id = "email" placeholder="Enter email" name = "email" [(ngModel)]="user.emailId">
+              <input type="email" class="form-control" id = "email" placeholder="Enter email" name = "email" [(ngModel)]="user.email">
         
             </div>
             <div class = "form-group">
@@ -38,9 +38,57 @@
               <label><input type = "checkbox" name = "remember"> Remember me</label>
             </div>
             <div class="row">
-              <!-- <button type="submit" class = "btn btn-info" routerLink="/homepage-component" routerLinkActive="active">Login</button> -->
-              <button type="submit" class = "btn btn-info" routerLink="/homepage-component" routerLinkActive="active" >Login</button>
+              <button type="submit" class = "btn btn-info" >Login</button> 
+              <!-- <button type="submit" class = "btn btn-info" routerLink="/homepage-component" routerLinkActive="active" >Login</button> -->
               <a routerLink="/registration-component" routerLinkActive="active">Sign Up</a>
             </div>
           </form>
-        </div>
+        </div> 
+        <!-- <div class="container">
+
+          <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm)">
+            <div class="form-group">
+              <label for="email">Email address:</label>
+              <input required type="email" class="form-control" id="emailId" name="emailId" [(ngModel)]="user.emailId" #email="ngModel" required pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+?\.[a-z]{2,3}$"
+              [class.is-invalid]="email.invalid && email.touched" placeholder="Enter Email ID">
+            </div>
+            
+          
+            <div *ngIf="email.invalid && (email.dirty || email.touched) "
+              class="alert alert-danger">Email id required</div>
+            
+              <div *ngIf="email.errors && email.invalid && email.touched && email.dirty ">
+                <div class=alert-danger *ngIf="email.errors?.['required']">
+                  email is required.
+                </div>
+                <div class="alert-danger" *ngIf="email.errors?.['pattern']">email id invalid</div>
+              </div>
+          
+          
+             <!-- <div *ngIf="email.invalid && (email.dirty || email.touched) && email.errors.pattern"
+              class="alert alert-danger">invalid email id</div>
+             
+          
+          
+          
+            
+          
+          
+          
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input required type="password" class="form-control" name="password" id="password"[(ngModel)]="user.password" #pass="ngModel" [class.is-invalid]="pass.invalid && pass.touched" placeholder="Enter Password">,
+            </div>
+          
+            <div *ngIf="pass.invalid && pass.touched"
+            class="alert alert-danger"> Password required</div>
+          
+          
+            <div class="checkbox">
+              <label><input type="checkbox"> Remember me</label>
+            </div>
+            <button type="submit" [disabled]="loginForm.invalid" class="btn btn-default">Login</button>
+          </form>
+          <small>New User ?</small><br>
+          <small id="signUp" (click)="gotoRegister()"> Sign Up</small>
+          </div> -->
