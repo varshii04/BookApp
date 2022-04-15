@@ -60,6 +60,14 @@ export class HomepageComponent implements OnInit {
     this.ntservice.addNote(this.nt).subscribe((data => this.note = data), (error => this.errMessage = error.message));
     
    }
+   sumbitForm(form:any) {
+  
+    this.http.categoriesbook(form).subscribe((response:any)=>{
+      this.details=response.items;
+      console.log(this.details);
+    });
+
+  }
 
   
 

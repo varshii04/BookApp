@@ -14,15 +14,14 @@ export class LoginComponent implements OnInit {
 
   title = 'login';
   user = new User();
+  msg="";
+  msg1="";
   constructor(private reg:FormBuilder,private _service:DataserviceService,private _router : Router){}
   loginform=this.reg.group({
-      password:['',[Validators.required,Validators.pattern(/^(?=.?[A-Z])(?=.?[a-z])(?=.?[0-9])(?=.?[^\w\s]).{8,}$/)]],
-      emailid:['',[Validators.required,Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]],
-
-
-
-
-      
+      // password:['',[Validators.required,Validators.pattern(/^(?=.?[A-Z])(?=.?[a-z])(?=.?[0-9])(?=.?[^\w\s]).{8,}$/)]],
+      // emailid:['',[Validators.required,Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]],  
+      password:[''], 
+      emailid:['']
     })
     
     get password(){
@@ -42,8 +41,12 @@ export class LoginComponent implements OnInit {
     this._service.loginUserFromRemote(this.user).subscribe(
       data =>{ console.log("response received");
       this._router.navigate(['/homepage-component'])},
-      _error => console.log("excepton occured")
-      )
+      _error => {
+      console.log("excepton occured");
+      this.msg="Bad credentials";
+      this.msg1="please enter correct email and password";
+    }
+    )
   
   }
 

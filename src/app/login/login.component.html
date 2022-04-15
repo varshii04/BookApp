@@ -23,16 +23,37 @@
         </form> -->
 
         <div class="container">
-          
+          <div class="wrapper" >
+            <p class="h4 mb-4">Login</p>
           <form #loginform="ngForm" (ngSubmit)="loginUser(loginform)">
+            <small class="text-danger">{{msg}}</small>
+            <small class="text-danger">{{msg1}}</small>
             <div class = "form-group">
               <label for="email">Email:</label>
-              <input type="email" class="form-control" id = "email" placeholder="Enter email" name = "email" [(ngModel)]="user.email">
-        
-            </div>
+              <input type="email" class="form-control" id = "email" placeholder="Enter email" name = "email" [(ngModel)]="user.email"  #email="ngModel" required
+              [class.is-valid]="email.invalid && email.touched"
+              >
+               <!-- <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email Id is required</small> -->
+               <div *ngIf="email.invalid && (email.dirty || email.touched) ">
+                <small class="text-danger" *ngIf="email.errors?.['required']">email id is required</small>
+                <small class="text-danger" *ngIf="email.errors?.['pattern']">enter the valid email id</small>
+              </div>
+            </div> 
+            
+            
+              <!-- <div *ngIf="email.errors && email.invalid && email.touched && email.dirty ">
+                <div class=alert-danger *ngIf="email.errors?.['required']">
+                  email is required.
+                </div>
+                <div class="alert-danger" *ngIf="email.errors?.['pattern']">email id invalid</div>
+              </div> -->
             <div class = "form-group">
               <label for="pwd">Password:</label>
-              <input type="password" class="form-control" id = "pwd" placeholder="Enter password" name = "password" [(ngModel)]="user.password">
+              <input type="password" class="form-control" id = "pwd" placeholder="Enter password" name = "password" [(ngModel)]="user.password" #password="ngModel" required
+              pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" 
+              [class.is-valid]="password.invalid && password.touched"
+              >
+              <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required</small>
             </div>
             <div class = "checkbox">
               <input type = "checkbox" name = "remember">
@@ -40,11 +61,13 @@
             </div>
             <div class="row">
               <button type="submit" class = "btn btn-info" >Login</button> 
-              <!-- <button type="submit" class = "btn btn-info" routerLink="/homepage-component" routerLinkActive="active" >Login</button> 
+              <!-- <button type="submit" class = "btn btn-info" routerLink="/homepage-component" routerLinkActive="active" >Login</button>--> 
               <a routerLink="/registration-component" routerLinkActive="active">Sign Up</a>
             </div>
+          
           </form>
-        </div>  
+        </div> 
+        </div> 
         <!-- <div class="container">
 
           <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm)">

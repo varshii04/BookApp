@@ -107,7 +107,7 @@
 <br>
 <br>
 
-    <div class="dropdown mt-3">
+    <!-- <div class="dropdown mt-3">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
         <span class="navbar-brand mb-0 h1">  Search by categories</span>
       </button>
@@ -116,7 +116,17 @@
         <li><a class="dropdown-item" href="#">Comedy</a></li>
         <li><a class="dropdown-item" href="#">Horror</a></li>
       </ul>
-    </div>
+    </div> -->
+    <form class="dropdown mt-3" (ngSubmit)="sumbitForm(myForm.value)" #myForm="ngForm">
+      <span class="navbar-brand mb-0 h1 "> Book Categories:</span>
+        <select class="form-control me-2 dropdown-item  mb-0 h1" name="list" id="" ngModel>
+        <option class="form-control me-2 dropdown-item  mb-0 h1" value="cat">Art</option>
+        <option class="form-control me-2 dropdown-item  mb-0 h1" value="dog">Comedy</option>
+        <option class="form-control me-2 dropdown-item  mb-0 h1" value="dog">Science</option>
+      </select>
+      <br>
+        <button class="btn btn-outline-success mr-2" type="submit">Submit</button><br/>
+      </form>   
   </div>
 </div>
 

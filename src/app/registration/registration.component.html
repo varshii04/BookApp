@@ -77,27 +77,41 @@
 
 
    <div class="container">
+    <div class="wrapper" >
+      <p class="h4 mb-4">Sign up</p>
           
     <form class="text-center border border-light p-5" #registrationform="ngForm" (ngSubmit)="registerUser(registrationform)">
       <div class = "form-group">
         <label for="email">Email:</label>
-        <input type="email" class="form-control" id = "email" placeholder="Enter email" name = "email" [(ngModel)]="register.email" required>
+        <input type="email" class="form-control" id = "email" placeholder="Enter email" name = "email" [(ngModel)]="register.email" #email="ngModel" required
+        [class.is-valid]="email.invalid && email.touched"
+        >
+        <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email Id is required</small>
         
   
       </div>
       <div class = "form-group">
         <label for="name">Name:</label>
-        <input type="name" class="form-control" id = "name" placeholder="Enter name" name = "name" [(ngModel)]="register.name">
+        <input type="name" class="form-control" id = "name" placeholder="Enter name" name = "name" [(ngModel)]="register.name" #name="ngModel" required
+        [class.is-valid]="name.invalid && name.touched"
+        >
+        <small class="text-danger" [class.d-none]="name.valid || name.untouched">name is required</small>
   
       </div>
       <div class = "form-group">
         <label for="phone">phone no:</label>
-        <input type="phone" class="form-control" id = "phone" placeholder="Enter phone" name = "phone" [(ngModel)]="register.phone">
+        <input type="phone" class="form-control" id = "phone" placeholder="Enter phone" name = "phone" [(ngModel)]="register.phone" #phone="ngModel" required
+        [class.is-valid]="phone.invalid && phone.touched"
+        >
+        <small class="text-danger" [class.d-none]="phone.valid || phone.untouched">phone number is required</small> 
   
       </div>
       <div class = "form-group">
         <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id = "pwd" placeholder="Enter password" name = "password" [(ngModel)]="register.password">
+        <input type="password" class="form-control" id = "pwd" placeholder="Enter password" name = "password" [(ngModel)]="register.password" #password="ngModel" required
+        [class.is-valid]="password.invalid && password.touched"
+        >
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched"> password is required</small>
       </div>
       <div class = "checkbox">
         <label><input type = "checkbox" name = "remember"> Remember me</label>
@@ -109,3 +123,4 @@
       </div>
     </form>
   </div>  
+   </div>
