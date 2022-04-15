@@ -38,20 +38,20 @@ public registerUserFromRemote(register:Register):Observable<any>{
   return this._http.post<any>("http://localhost:8089/registeruser",register)
 }
 
-public addFavList(favourite:Favourite):Observable<any>{
-  return this._http.post<any>("http://localhost:8089/favlist",favourite);
-}
-  url = 'http://localhost:8089/favlist/';
+// public addFavList(favourite:Favourite):Observable<any>{
+//   return this._http.post<any>("http://localhost:8089/favlist",favourite);
+// }
+ // url = 'http://localhost:8089/favlist/';
 
   
 
-  getBooks(): Observable<any> {
-    return this._http.get(`${this.url}`);
-  }
+  // getBooks(): Observable<any> {
+  //   return this._http.get(`${this.url}`);
+  // }
 
-  addBook(book: Object): Observable<Object> {
-    return this._http.post(`${this.url}`, book);
-  }
+  // addBook(book: Object): Observable<Object> {
+  //   return this._http.post(`${this.url}`, book);
+  // }
 
   
 }

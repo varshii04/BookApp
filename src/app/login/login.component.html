@@ -22,7 +22,7 @@
       </div>
         </form> -->
 
-        <!-- <div class="container">
+        <div class="container">
           
           <form #loginform="ngForm" (ngSubmit)="loginUser(loginform)">
             <div class = "form-group">
@@ -44,7 +44,7 @@
               <a routerLink="/registration-component" routerLinkActive="active">Sign Up</a>
             </div>
           </form>
-        </div>  -->
+        </div>  
         <!-- <div class="container">
 
           <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm)">
@@ -95,10 +95,10 @@
           </div> -->
 
 
-          <form class="text-center border border-light p-5">
+          <!-- <form class="text-center border border-light p-5">
             <div class="wrapper" >
                 <p class="h4 mb-4">Login</p>
-                <div [formGroup]="loginform" #loginForm="ngForm" (ngSubmit)="loginUser(loginForm)">
+                <div [formGroup]="loginform" #loginForm="ngForm"(ngSubmit)="loginUser(loginForm)">
           
                     <input [class.is-invalid]="loginform.get('emailid').invalid && loginform.get('emailid').touched" formControlName="emailid" type ="email" class="form-control mb-4" placeholder="name@example.com">
                     <div *ngIf="loginform.get('emailid').invalid && loginform.get('emailid').touched">
@@ -112,9 +112,9 @@
                       <small ngIf="loginform.get('password').errors?.['required']" class="text-danger">Password required</small>
                       </div>
                       <div>
-                      <button type="submit" class="btn mt-3" >Login</button>
+                      <button type="submit" class="btn mt-3" routerLink="/homepage-component" routerLinkActive="active">Login</button>
                       <a routerLink="/registration-component" routerLinkActive="active">Sign Up</a>
                       </div>
                     </div>
                 </div>
-                  </form>
+                  </form> -->

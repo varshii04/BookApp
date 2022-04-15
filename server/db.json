@@ -24,6 +24,11 @@
       "title": "Half Girlfriend",
       "text": "http://books.google.com/books/content?id=l9b7oQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
       "id": 5
+    },
+    {
+      "title": "Watermelon",
+      "text": "http://books.google.com/books/content?id=hjq7oyeoATwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "id": 6
     }
   ]
 }

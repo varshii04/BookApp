@@ -42,9 +42,9 @@ export class HomepageComponent implements OnInit {
     //   console.log(response),
     //   this.details=response.items;
     // });
-    this._router.events.subscribe(value => {
-      this.getBooks();
-    });
+    // this._router.events.subscribe(value => {
+    //   this.getBooks();
+    // });
 
 
   }
@@ -56,11 +56,11 @@ export class HomepageComponent implements OnInit {
          console.log(this.details);
        });
    }
-   getBooks() {
-    this.http.getBooks().subscribe(data => {
-      this.books = data;
-    });
-  }
+  //  getBooks() {
+  //   this.http.getBooks().subscribe(data => {
+  //     this.books = data;
+  //   });
+  //}
   //  addFav(){
   //   this.http.addFavList(this.favourite).subscribe(
   //     data => console.log("response received"),
