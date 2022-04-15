@@ -1,123 +1,208 @@
 <body>
-    <main>
-        <header>
-            Book Store
-            <div class="topnav">
-                <a class="active" href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <div class="container">
-                    <div class="row">
-                        <div>
-                            <button class="b1"  routerLink="/login-component" routerLinkActive="active">Login</button>
-                            <button class="b2"  routerLink="/registration-component" routerLinkActive="active">Sign Up</button>    
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- <div  > -->
-            </div>
-        </header>
-        <section>
-            
-                    <form>
-                      
-                      <div class="container">
-                        <div id="title" class="center">
-                          <!-- <h1 id="header" class="text-center mt-5">Book Finder</h1> -->
-                          <div class="row">
-                            <div class="input">
+  <main>
+      <header>
+          Book Store
+          <div class="topnav">
+              <a class="active" href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
+              <a routerLink="/book" routerLinkActive="active">Favourite List</a>
+
+              <div class="container">
+                  <div class="row">
+                      <div>
+                          <button class="b1"  routerLink="/login-component" routerLinkActive="active">Login</button>
+                          <button class="b2"  routerLink="/registration-component" routerLinkActive="active">Sign Up</button>  
+                          <button class="b1"  routerLink="/login-component" routerLinkActive="active">Logout</button>
+
+                      </div>
+                  </div>
+              </div>
+              
+          </div>
+      </header>
+      <section>
+
+          <!-- Background image -->
+<div class="bg-image" style="background-image: url('');">
+                  <form>
+                    
+                    <div class="container">
+                      <div id="title" class="center">
+                        <div class="row">
+                          <div class="input">
+                            
+                              <input type="text" id="username" name="username" #username>
                               
-                                <input type="text" id="username" name="username" #username>
-                                
-                                <button type="button" (click)="onsearch(username.value)">Click me</button>
-                              <!-- <input type="text" placeholder="Search Books"  id="search" />
-                              <button id="searchbutton">Search</button> -->
+                              <button type="button" (click)="onsearch(username.value)">Click me</button>
+                            
 
 
-                              
-                            </div>
+                            
                           </div>
                         </div>
-                        </div>
+                      </div>
+                      </div>
 
-                        <div class="container pb-20">
-
-                            <div  class="container">
-                            <div>
-                                <div>
-                                    <div class="card-body">
-
-                            <div class="details"  *ngFor="let t of details">
-                                <div class="text-center">
-
-                                    <p class="text-title">{{ t.volumeInfo.title }}</p>
-
-                                <!-- <img [src]="t.volumeInfo.imageLinks.smallThumbnail" alt="Image" (click)="t.volumeInfo.infoLink" class="card h-100"> -->
-
-                                <img [src]="t.volumeInfo.imageLinks&&t.volumeInfo.imageLinks.smallThumbnail" alt="Image" class="img-fluid">
-                                </div>
-
-
-                                <div class="text-center">
-
-                                
-                                    <p class="text-card-text">{{ t.volumeInfo.authors }}</p>
-                                    <div >
-                                        <p class="h5">Book Description</p>
-                                      </div>
-                                      <div class="text-left">
-                                        <p class="text-card-text">
-                                          {{ t.volumeInfo.description }}
-                                        </p>
-                                      </div>
-                                    <div class="row">
-                                        <div>
-                                                                        
-                                    <a href="{{ t.volumeInfo.previewLink }}" mat-stroked-button color="primary" target="_blank">Read More</a>
-                                    <button (click)="addFav()">Add to Fav</button>
-                                        </div>
-                                    </div>
-                                
-                                </div>
-                            
-                            </div> 
-
-                                </div>
-                                </div>
-                            </div>
-
-                            </div>
-                        </div>
-                        <div class="parent"  *ngFor="let t of details">
-                            <div class="div1">
-                              {{ t.volumeInfo.title }} <img [src]="t.volumeInfo.imageLinks&&t.volumeInfo.imageLinks.smallThumbnail" alt="Image" class="img-fluid">
-                              {{ t.volumeInfo.authors }} 
-                              <p class="text">
-                                <!-- {{ t.volumeInfo.description }} -->
-                                <a href="{{ t.volumeInfo.previewLink }}" mat-stroked-button color="primary" target="_blank">Read More</a>
-                                
-                              </p> 
-                            </div>
-                            
-                            </div>
-                            <div class="div2"> </div>
+                      <br>
+                      <br>
+                      <div class="container6">
                         
-                          
-                    </form>
-                
-                
+                        <div class="card" style="width: 8rem;">
+                          <div class="details"  *ngFor="let t of details">
+                            <img [src]="t.volumeInfo.imageLinks&&t.volumeInfo.imageLinks.smallThumbnail" alt="Card image cap" class="card-img-top">
+                            <div class="card-body">
+                              <h2 class="card-title">{{ t.volumeInfo.title }}</h2>
+                              
 
-                 
-                
-            
-            
-            
-        </section>
-        
-        
-        <footer>
-            Privacy @101 company policy
-        </footer>
-    </main>
+
+
+
+                            
+
+                            <mat-accordion>
+                              <mat-expansion-panel (opened)="panelOpenState = true"
+                                (closed)="panelOpenState = false">
+                                <mat-expansion-panel-header>
+                                  
+                                  <mat-panel-description>
+                                    {{ t.volumeInfo.authors }}
+                                                                      </mat-panel-description>
+                                </mat-expansion-panel-header>
+                                <br>
+                                <button mat-stroked-button color="primary" (click)="addFav(t.volumeInfo.title,t.volumeInfo.imageLinks&&t.volumeInfo.imageLinks.smallThumbnail)">Add to Fav</button>
+                                <a href="{{ t.volumeInfo.previewLink }}" mat-stroked-button color="primary" target="_blank">Read More</a>                                </mat-expansion-panel>
+                            </mat-accordion>
+
+
+
+
+
+
+                            
+                            <!-- model -->
+                            <!-- <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">{{ t.volumeInfo.title }}</h5>
+
+                                  </div>
+                                  <div class="modal-body">
+                                    <h2 class="text-card-text">{{ t.volumeInfo.authors }}</h2>
+                                    <p class="h5">Book Description</p>
+                                    <p class="text-card-text">
+                                      {{ t.volumeInfo.description }}
+                                    </p>
+                                    <a href="{{ t.volumeInfo.previewLink }}" mat-stroked-button color="primary" target="_blank">Read More</a>
+
+
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
+                                    <button type="button" id="close-modal" data-dismiss="modal" style="display: none">Close</button>
+
+                                  </div>
+                                </div>
+                              </div>
+                            </div> -->
+                            
+                              <!-- <a type="button" class="btn btn-primary" data-toggle="modal" id="modal" data-target="#myModal"(click)="open()">
+                                See more!
+                              </a> -->
+
+                              <!-- <h2 mat-dialog-title>{{ t.volumeInfo.title }}</h2>
+                              <mat-dialog-content class="mat-typography">
+                                <h2 >{{ t.volumeInfo.authors }}</h2>
+                                <p class="h5">Book Description</p>
+                                    <p>
+                                      {{ t.volumeInfo.description }}
+                                    </p>
+                                    <a href="{{ t.volumeInfo.previewLink }}" mat-stroked-button color="primary" target="_blank">Read More</a>
+
+                              </mat-dialog-content>
+                              <mat-dialog-actions>
+                                <button mat-button mat-dialog-close>Cancel</button>
+                                <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
+                              </mat-dialog-actions> -->
+
+
+
+
+                            
+                          </div>
+                          </div>
+                        </div>
+
+                      </div>
+
+
+
+
+
+
+
+                          <!-- <div  class="container">
+                          
+                            
+                          <div class="card-body">
+
+                          <div class="details"  *ngFor="let t of details">
+                              <div class="text-center">
+
+                                  <p class="text-title">{{ t.volumeInfo.title }}</p>
+
+
+                              <img [src]="t.volumeInfo.imageLinks&&t.volumeInfo.imageLinks.smallThumbnail" alt="Image" class="img-fluid">
+                              </div>
+
+
+                              <div class="text-center"> -->
+
+                              
+                                  <!-- <p class="text-card-text">{{ t.volumeInfo.authors }}</p>
+                                  <div >
+                                      <p class="h5">Book Description</p>
+                                    </div>
+                                    <div class="text-left">
+                                      <p class="text-card-text">
+                                        {{ t.volumeInfo.description }}
+                                      </p>
+                                    </div>
+                                  <div class="row">
+                                      <div>
+                                                                      
+                                  <a href="{{ t.volumeInfo.previewLink }}" mat-stroked-button color="primary" target="_blank">Read More</a>
+                                  <button (click)="addFav()">Add to Fav</button>
+                                      </div>
+                                  </div>
+                              
+                              </div>
+                          
+                          </div> 
+
+                              </div>
+                        
+
+                          </div> -->
+                      
+                      
+                      
+                        
+                  </form>
+              
+              
+
+               
+              
+          
+          
+</div>
+      </section>
+      
+      
+      <footer>
+          Privacy @101 company policy
+      </footer>
+  </main>
 </body>

@@ -13,7 +13,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { DataserviceService } from './dataservice.service';
-
+import { BookComponent } from './book/book.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { NotesService } from './notes.service';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -21,7 +24,8 @@ import { DataserviceService } from './dataservice.service';
     AppComponent,
     LoginComponent,
     HomepageComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    BookComponent
   ],
   imports: [
     BrowserModule,
@@ -32,9 +36,10 @@ import { DataserviceService } from './dataservice.service';
     HttpClientModule,
     MatButtonModule,
     FormsModule,
-    ReactiveFormsModule
+    MatExpansionModule,
+    MatCardModule
   ],
-  providers: [DataserviceService],
+  providers: [DataserviceService,NotesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

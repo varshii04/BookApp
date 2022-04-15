@@ -27,19 +27,35 @@ export class DataserviceService {
     return this._http.get(`${this.api}?q=${bookname}:keyes&key=${this.apikey}+&maxResults=40`);
 
  }
- getBooks() {
+ getBooks1() {
   return this._http.get(`${this.api}?q=:keyes&key=${this.apikey}+&limit=10`);
 }
 public loginUserFromRemote(user:User):Observable<any>{
   
-  return this._http.post<any>("http://localhost:8095/login", user)
+  return this._http.post<any>("http://localhost:8089/login", user)
 }
 public registerUserFromRemote(register:Register):Observable<any>{
-  return this._http.post<any>("http://localhost:8095/registeruser",register)
+  return this._http.post<any>("http://localhost:8089/registeruser",register)
 }
 
 public addFavList(favourite:Favourite):Observable<any>{
-  return this._http.post<any>("http://localhost:8095/favlist",favourite)
+  return this._http.post<any>("http://localhost:8089/favlist",favourite);
+}
+  url = 'http://localhost:8089/favlist/';
+
+  
+
+  getBooks(): Observable<any> {
+    return this._http.get(`${this.url}`);
+  }
+
+  addBook(book: Object): Observable<Object> {
+    return this._http.post(`${this.url}`, book);
+  }
+
+  
 }
 
-}
+
+
+

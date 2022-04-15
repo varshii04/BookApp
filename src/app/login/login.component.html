@@ -22,7 +22,7 @@
       </div>
         </form> -->
 
-        <div class="container">
+        <!-- <div class="container">
           
           <form #loginform="ngForm" (ngSubmit)="loginUser(loginform)">
             <div class = "form-group">
@@ -35,15 +35,16 @@
               <input type="password" class="form-control" id = "pwd" placeholder="Enter password" name = "password" [(ngModel)]="user.password">
             </div>
             <div class = "checkbox">
-              <label><input type = "checkbox" name = "remember"> Remember me</label>
+              <input type = "checkbox" name = "remember">
+              <label> Remember me</label>
             </div>
             <div class="row">
               <button type="submit" class = "btn btn-info" >Login</button> 
-              <!-- <button type="submit" class = "btn btn-info" routerLink="/homepage-component" routerLinkActive="active" >Login</button> -->
+              <!-- <button type="submit" class = "btn btn-info" routerLink="/homepage-component" routerLinkActive="active" >Login</button> 
               <a routerLink="/registration-component" routerLinkActive="active">Sign Up</a>
             </div>
           </form>
-        </div> 
+        </div>  -->
         <!-- <div class="container">
 
           <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm)">
@@ -92,3 +93,28 @@
           <small>New User ?</small><br>
           <small id="signUp" (click)="gotoRegister()"> Sign Up</small>
           </div> -->
+
+
+          <form class="text-center border border-light p-5">
+            <div class="wrapper" >
+                <p class="h4 mb-4">Login</p>
+                <div [formGroup]="loginform" #loginForm="ngForm" (ngSubmit)="loginUser(loginForm)">
+          
+                    <input [class.is-invalid]="loginform.get('emailid').invalid && loginform.get('emailid').touched" formControlName="emailid" type ="email" class="form-control mb-4" placeholder="name@example.com">
+                    <div *ngIf="loginform.get('emailid').invalid && loginform.get('emailid').touched">
+                     <small ngIf="loginform.get('emailid').errors?.['required']" class="text-danger">Email id required</small>
+                     </div>
+          
+                     <input [class.is-invalid]="loginform.get('password').invalid && loginform.get('password').touched" formControlName="password" type ="password" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                     <small  id="defaultRegisterFormPasswordHelpBlock"  class="form-text text-muted mb-4"> At least 8 characters and 1 digit</small>
+             
+                      <div *ngIf="loginform.get('password').invalid && loginform.get('password').touched">
+                      <small ngIf="loginform.get('password').errors?.['required']" class="text-danger">Password required</small>
+                      </div>
+                      <div>
+                      <button type="submit" class="btn mt-3" >Login</button>
+                      <a routerLink="/registration-component" routerLinkActive="active">Sign Up</a>
+                      </div>
+                    </div>
+                </div>
+                  </form>
