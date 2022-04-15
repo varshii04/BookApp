@@ -29,6 +29,26 @@
       "title": "Watermelon",
       "text": "http://books.google.com/books/content?id=hjq7oyeoATwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       "id": 6
+    },
+    {
+      "title": "Women and Depression",
+      "text": "http://books.google.com/books/content?id=dWLljTH0powC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "id": 7
+    },
+    {
+      "title": "The Post-Truth Era",
+      "text": "http://books.google.com/books/content?id=f0Kvm3KObXoC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "id": 8
+    },
+    {
+      "title": "The Hidden History of Coined Words",
+      "text": "http://books.google.com/books/content?id=UnEhEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "id": 9
+    },
+    {
+      "title": "Sammy Keyes and the Curse of Moustache Mary",
+      "text": "http://books.google.com/books/content?id=eJ_cxgPgQboC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "id": 10
     }
   ]
 }

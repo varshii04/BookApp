@@ -33,19 +33,7 @@ export class HomepageComponent implements OnInit {
   }
   ngOnInit(): void {
 
-    // this.http.searchbookdata().subscribe((response:any)=>{
-    //   console.log(response);
-    //    this.title1=response.items;
-    //   console.log(this.title1);
-    // });
-    // this.http.getBooks1().subscribe((response:any)=>{
-    //   console.log(response),
-    //   this.details=response.items;
-    // });
-    // this._router.events.subscribe(value => {
-    //   this.getBooks();
-    // });
-
+    
 
   }
    onsearch(username:string) {
@@ -56,37 +44,7 @@ export class HomepageComponent implements OnInit {
          console.log(this.details);
        });
    }
-  //  getBooks() {
-  //   this.http.getBooks().subscribe(data => {
-  //     this.books = data;
-  //   });
-  //}
-  //  addFav(){
-  //   this.http.addFavList(this.favourite).subscribe(
-  //     data => console.log("response received"),
-  //     _error => console.log("excepton occured")
-  //     )
-  //  }
-  // addFav(): void {
-  //   this._router.navigate(['book'])
-  //     .then((e) => {
-  //       if (e) {
-  //         console.log("Navigation is successful!");
-  //       } else {
-  //         console.log("Navigation has failed!");
-  //       }
-  //     });
-  // };
-  // addFav(value1: string, value2: string)
-  // {
-  //   this.http.addFavList(this.favourite).subscribe(
-  //     data =>{ console.log("response received");
-  //     //this._router.navigate(['/book-component'])
-  //   },
-  //     _error => console.log("excepton occured")
-  //     )
-  
-  // }
+ 
 
 
   public addFav(value1: string, value2: string) {
