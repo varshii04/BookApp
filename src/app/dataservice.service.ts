@@ -28,14 +28,14 @@ export class DataserviceService {
 
  }
  getBooks1() {
-  return this._http.get(`${this.api}?q=:keyes&key=${this.apikey}+&limit=10`);
+  return this._http.get(`${this.api}?q=:keyes&key=${this.apikey}+&maxResults=21`);
 }
 public loginUserFromRemote(user:User):Observable<any>{
   
-  return this._http.post<any>("http://localhost:8089/login", user)
+  return this._http.post<any>("http://localhost:7090/login", user)
 }
 public registerUserFromRemote(register:Register):Observable<any>{
-  return this._http.post<any>("http://localhost:8089/registeruser",register)
+  return this._http.post<any>("http://localhost:7090/registeruser",register)
 }
 
 // public addFavList(favourite:Favourite):Observable<any>{
@@ -55,19 +55,9 @@ public registerUserFromRemote(register:Register):Observable<any>{
 
   categoriesbook(bookname1:any)
    {
-     if(bookname1=="Fiction")
-     {
-
-     
-     
-     return this._http.get(`${this.api}?q=subject:"Fiction":keyes&key=${this.apikey}+&maxResults=10`);
-     }
-     else{
-      return this._http.get(`${this.api}?q=subject:"Art":keyes&key=${this.apikey}+&maxResults=10`);
-
-     }
- 
+      return this._http.get(`${this.api}?q=subject:+${bookname1}:keyes&key=${this.apikey}+&maxResults=21`);
   }
+
 }
 
 

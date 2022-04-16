@@ -84,34 +84,51 @@
       <div class = "form-group">
         <label for="email">Email:</label>
         <input type="email" class="form-control" id = "email" placeholder="Enter email" name = "email" [(ngModel)]="register.email" #email="ngModel" required
-        [class.is-valid]="email.invalid && email.touched"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        [class.is-invalid]="email.invalid && email.touched"
         >
-        <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email Id is required</small>
-        
+        <!-- <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email Id is required</small> -->
+        <div *ngIf="email.invalid && (email.dirty || email.touched) ">
+          <small class="text-danger" *ngIf="email.errors?.['required']">email id is required</small>
+          <small class="text-danger" *ngIf="email.errors?.['pattern']">enter the valid email id</small>
+        </div>
   
       </div>
       <div class = "form-group">
         <label for="name">Name:</label>
         <input type="name" class="form-control" id = "name" placeholder="Enter name" name = "name" [(ngModel)]="register.name" #name="ngModel" required
-        [class.is-valid]="name.invalid && name.touched"
+        pattern="[A-Za-z]{1,32}"
+        [class.is-invalid]="name.invalid && name.touched"
         >
-        <small class="text-danger" [class.d-none]="name.valid || name.untouched">name is required</small>
-  
+        <!-- <small class="text-danger" [class.d-none]="name.valid || name.untouched">name is required</small> -->
+        <div *ngIf="name.invalid && (name.dirty || name.touched) ">
+          <small class="text-danger" *ngIf="name.errors?.['required']">name is required</small>
+          <small class="text-danger" *ngIf="name.errors?.['pattern']">enter the valid name</small>
+        </div>
       </div>
       <div class = "form-group">
         <label for="phone">phone no:</label>
         <input type="phone" class="form-control" id = "phone" placeholder="Enter phone" name = "phone" [(ngModel)]="register.phone" #phone="ngModel" required
-        [class.is-valid]="phone.invalid && phone.touched"
+        pattern="[789][0-9]{9}"
+        [class.is-invalid]="phone.invalid && phone.touched"
         >
-        <small class="text-danger" [class.d-none]="phone.valid || phone.untouched">phone number is required</small> 
-  
+        <!-- <small class="text-danger" [class.d-none]="phone.valid || phone.untouched">phone number is required</small>  -->
+        <div *ngIf="phone.invalid && (phone.dirty || phone.touched) ">
+          <small class="text-danger" *ngIf="phone.errors?.['required']">phone is required</small>
+          <small class="text-danger" *ngIf="phone.errors?.['pattern']">enter the valid phone</small>
+        </div>
       </div>
       <div class = "form-group">
         <label for="pwd">Password:</label>
         <input type="password" class="form-control" id = "pwd" placeholder="Enter password" name = "password" [(ngModel)]="register.password" #password="ngModel" required
-        [class.is-valid]="password.invalid && password.touched"
+        
+        [class.is-invalid]="password.invalid && password.touched"
         >
-        <small class="text-danger" [class.d-none]="password.valid || password.untouched"> password is required</small>
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched"> password is required</small> 
+        <!-- <div *ngIf="password.invalid && (password.dirty || password.touched) ">
+          <small class="text-danger" *ngIf="password.errors?.['required']">password is required</small>
+          <small class="text-danger" *ngIf="password.errors?.['pattern']">enter the valid password</small>
+        </div> -->
       </div>
       <div class = "checkbox">
         <label><input type = "checkbox" name = "remember"> Remember me</label>
