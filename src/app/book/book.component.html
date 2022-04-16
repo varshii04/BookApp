@@ -1,4 +1,4 @@
-
+<!-- 
 <div >
   <h1>Favourite list <button type="submit" class = "btn btn-info" routerLink="/homepage-component" routerLinkActive="active" >Back to Home</button></h1>
   <div class="card">
@@ -12,12 +12,36 @@
             
           </mat-card-header>
           <img mat-card-image src="{{n.text}}" alt={{n.title}}>
-          <!-- <mat-card-title>{{n.description}}</mat-card-title> -->
+          <!-- <mat-card-title>{{n.description}}</mat-card-title> 
         </mat-card>
       </div>
     </li>
   </ul>
-</div>
+   </div>
+</div> -->
+
+<div >
+  <h1>Favourite list <button type="submit" class = "btn btn-info" routerLink="/homepage-component" routerLinkActive="active" >Back to Home</button></h1>
+  <div class="text-center">
+  <ul *ngFor="let n of nts">
+    <li *ngIf = "n.title">
+      <div >
+        
+          <div  class="example-header-image"></div>
+          <p>{{n.title}}</p>
+          <img src="{{n.text}}" alt={{n.title}}>
+          <div>{{ (n.description | slice:0:150)+'....' }}</div>
+          
+
+            
+          
+          
+          <!-- <mat-card-title>{{n.description}}</mat-card-title> -->
+        
+      </div>
+    </li>
+  </ul>
+   </div>
 </div>
 
 
