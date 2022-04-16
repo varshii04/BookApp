@@ -3,62 +3,45 @@
     {
       "title": "",
       "text": "",
+      "description": "",
       "id": 1
     },
-    {
-      "title": "The Post-Truth Era",
-      "text": "http://books.google.com/books/content?id=f0Kvm3KObXoC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-      "id": 2
-    },
-    {
-      "title": "Sammy Keyes and the Hotel Thief",
-      "text": "http://books.google.com/books/content?id=WTqJURMIjc8C&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-      "id": 3
-    },
-    {
-      "title": "The Post-Truth Era",
-      "text": "http://books.google.com/books/content?id=f0Kvm3KObXoC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-      "id": 4
-    },
-    {
-      "title": "Half Girlfriend",
-      "text": "http://books.google.com/books/content?id=l9b7oQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-      "id": 5
-    },
+    
     {
       "title": "Watermelon",
       "text": "http://books.google.com/books/content?id=hjq7oyeoATwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "description": "February the fifteenth is a very special day for me. It is the day I gave birth to my first child. It is also the day my husband left me...I can only assume the two events weren't entirely unrelated. Claire has everything she ever wanted: a husband she adores, a great apartment, a good job. Then, on the day she gives birth to their first baby, James informs her that he's leaving her. Claire is left with a newborn daughter, a broken heart, and a postpartum body that she can hardly bear to look at. She decides to go home to Dublin. And there, sheltered by the love of a quirky family, she gets better. So much so, in fact, that when James slithers back into her life, he's in for a bit of a surprise.",
+      "id": 2
+    },
+    {
+      "title": "Grown Ups",
+      "text": "http://books.google.com/books/content?id=RWCRDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "description": "Fed up of being a grown up? Get away from it all this Christmas with Marian Keyes' latest No. 1 bestseller 'Magnificently messy lives, brilliantly untangled. Funny, tender and completely absorbing!' GRAHAM NORTON 'SUCH a treat. Like reading the cleverest cream cake of words' CAITLIN MORAN ______ MEET JESSIE, CARA AND NELL. Married to brothers Johnny, Ed and Liam Casey. Three very different women tied to three very different men. Every family occasion is a party - until the day the secrets spill out. PLAYTIME IS OVER. BUT WHERE ARE THE GROWN-UPS? ______ 'Comic, convincing and true. Grown Ups has an almost Austenesque insight into character. Keyes knows how to make serious issues relatable - and get a few grownup laughs, too' GUARDIAN 'Hilarious, alternately heartwarming and heartbreaking. I loved everything about it' DAILY MAIL 'You may have written the best book of your career' CHRIS EVANS, VIRGIN RADIO 'Superb. Warm-hearted, wise and highly entertaining' OBSERVER 'Keyes at her best: capturing everyday voices with humour and empathy with writing that you'll devour in a weekend. Just pure and simple joy' STYLIST 'I loved every word. I will be missing those gorgeous vibrant characters for many weeks to come' LIANE MORIARTY, bestselling author of Big Little Lies 'Messy, tangled complex humans who reminded me that few of us ever really sort our lives out at all' JOJO MOYES, bestselling author of Me Before You 'Her best yet. Charming, funny and poignant, but also profound, heartbreaking' NINA STIBBE, bestselling author of Reasons to be Cheerful",
+      "id": 3
+    },
+    {
+      "title": "Sushi for Beginners",
+      "text": "http://books.google.com/books/content?id=vkdsygAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "description": "Marian Keyes, author of the international best-seller This Charming Man and the award-winning Anybody Out There, explores life's quirks and idiosyncrasies with unrivalled humour and sensitivity in Sushi for Beginners. 'Dammit,' she realized. 'I think I'm having a nervous breakdown.'Hot-shot magazine editor Lisa Edwards' career is destined for high-rise New York when suddenly she's diverted to low-rise Dublin. But what can she do about it?Ashling Kennedy, Lisa's super-organized assistant, worries about everything from her lack of waist to the lack of men in her life. She's even anxious about a little bit of raw fish ...Clodagh Kelly is Ashling's best friend and has her prince, her beautiful kids and a lovely house - everything in fact that Ashling ever wanted. She should be - yet, she's not - happy.Three women on the verge of happiness and even closer to complete breakdown. Which way will they fall?'Keyes has given romantic comedy a much-needed face-lift. Chatty and warmhearted, Keyes's talent is to tell it how it is' Independent'Laden with plots twists, jokey asides and nicely turned bits of zeitgeisty observational humour ... her energetic, well-constructed prose delivers life and people in satisfyingly various shades of grey' Guardian'The hottest young female writer in Britain and the voice of a generation' Daily Mirrorwww.mariankeyes.comMarian Keyes's international bestselling novels include her Walsh sisters novels, Rachel's Holiday, Watermelon, Angels, the award-winning Anybody Out There and now The Mystery of Mercy Close, which have marked Marian Keyes as one of the most distinctive female voices of this generation.",
+      "id": 4
+    },
+    {
+      "title": "Sammy Keyes and the Hollywood Mummy",
+      "text": "http://books.google.com/books/content?id=WSQrwjzItnwC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "description": "A Hollywood actress, who had been competing with Sammy's mother for an important role, is murdered, but thirteen-year-old Sammy and her friend Marissa are on the case.",
+      "id": 5
+    },
+    {
+      "title": "This Charming Man",
+      "text": "http://books.google.com/books/content?id=nVqyAI_GcpEC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "description": "Lola has just found out that her boyfriend - charismatic politician Paddy de Courcy - is getting married. To someone else. Heartbroken, Lola flees the city for a cottage by the sea. But will Lola's retreat prove as idyllic as she hopes? Journalist Grace wants the inside story on Paddy de Courcy's engagement and thinks Lola holds the key to it. Grace knew Paddy a long time ago. But why can't she forget him? Grace's sister, Marnie, might have the answer but she also has issues with the past. Her loving loving husband and beautiful daughters are wonderful, but they can't take away memories of her first love: a certain Paddy de Courcy. What will it take for Marnie to be able to move on? Alicia Thornton is Paddy's wife-to-be. Determined to be the perfect wife, Alicia would do anything for her fiancé. But does she know the real Paddy? Four very different women. One awfully charming man. And the dark secret that binds them all...",
       "id": 6
     },
     {
-      "title": "Women and Depression",
-      "text": "http://books.google.com/books/content?id=dWLljTH0powC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "title": "Sammy Keyes and the Dead Giveaway",
+      "text": "http://books.google.com/books/content?id=YKnhte2sWaoC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "description": "\"The most winning junior detective ever in teen lit. (Take that, Nancy Drew!)\" —Midwest Children's Book Review The bad news: Sammy's made a deadly mistake. The good news: No one knows she did it. The delicious dilemma: Everyone thinks her archenemy Heather is to blame. Now Heather is in a major jam, and in some ways it's only fair—Heather has pinned more than a few crimes on Sammy. Besides, there are distractions galore to keep Sammy from confessing. Like the end of the school year. And the Farewell Dance. Especially the dance, since she's going with Heather's (dreamy) brother Casey. But Sammy knows the truth has an uncanny way of resurfacing, and when it does, the stench can be more vile than the junior high cafeteria. The Sammy Keyes mysteries are fast-paced, funny, thoroughly modern, and true whodunits. Each mystery is exciting and dramatic, but it's the drama in Sammy's personal life that keeps readers coming back to see what happens next with her love interest Casey, her soap-star mother, and her mysterious father.",
       "id": 7
-    },
-    {
-      "title": "The Post-Truth Era",
-      "text": "http://books.google.com/books/content?id=f0Kvm3KObXoC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-      "id": 8
-    },
-    {
-      "title": "The Hidden History of Coined Words",
-      "text": "http://books.google.com/books/content?id=UnEhEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "id": 9
-    },
-    {
-      "title": "Sammy Keyes and the Curse of Moustache Mary",
-      "text": "http://books.google.com/books/content?id=eJ_cxgPgQboC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-      "id": 10
-    },
-    {
-      "title": "The Post-Truth Era",
-      "text": "http://books.google.com/books/content?id=f0Kvm3KObXoC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-      "id": 11
-    },
-    {
-      "title": "The Courage to Write",
-      "text": "http://books.google.com/books/content?id=hTytZMVdGUoC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-      "id": 12
     }
   ]
 }
