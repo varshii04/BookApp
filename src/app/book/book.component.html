@@ -1,9 +1,10 @@
 
-<div>
+<div >
   <h1>Favourite list <button type="submit" class = "btn btn-info" routerLink="/homepage-component" routerLinkActive="active" >Back to Home</button></h1>
+  <div class="card">
   <ul *ngFor="let n of nts">
     <li *ngIf = "n.title">
-      <div>
+      <div >
         <mat-card class="example-card">
           <mat-card-header>
             <div mat-card-avatar class="example-header-image"></div>
@@ -11,11 +12,12 @@
             
           </mat-card-header>
           <img mat-card-image src="{{n.text}}" alt={{n.title}}>
-          
+          <!-- <mat-card-title>{{n.description}}</mat-card-title> -->
         </mat-card>
       </div>
     </li>
   </ul>
+</div>
 </div>
 
 

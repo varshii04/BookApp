@@ -55,7 +55,24 @@ public registerUserFromRemote(register:Register):Observable<any>{
 
   categoriesbook(bookname1:any)
    {
-      return this._http.get(`${this.api}?q=subject:+${bookname1}:keyes&key=${this.apikey}+&maxResults=21`);
+     if(bookname1=="Fiction")
+     { 
+     return this._http.get(`${this.api}?q=subject:"Fiction":keyes&key=${this.apikey}+&maxResults=10`);
+     }
+     else if(bookname1=="Art")
+     {
+      return this._http.get(`${this.api}?q=subject:"Art":keyes&key=${this.apikey}+&maxResults=10`);
+
+     }
+     else if(bookname1=="Comedy"){
+      return this._http.get(`${this.api}?q=subject:"Comedy":keyes&key=${this.apikey}+&maxResults=10`);
+
+     }
+     else{
+      return this._http.get(`${this.api}?q=subject:"science":keyes&key=${this.apikey}+&maxResults=10`);
+
+     }
+ 
   }
 
 }

@@ -20,8 +20,8 @@ export class HomepageComponent implements OnInit {
   panelOpenState = false;
 
   public errMessage: string = "";
-  public nt: Note= new Note("", "");
-  public note: Note = new Note("", "");
+  public nt: Note= new Note("", "","");
+  public note: Note = new Note("", "","");
   public nts: Note[] = [];
   public val: Note[] = [];
 
@@ -47,13 +47,15 @@ export class HomepageComponent implements OnInit {
  
 
 
-  public addFav(value1: string, value2: string) {
-    this.nt = new Note("", "");
+  public addFav(value1: string, value2: string,value3:string) {
+    this.nt = new Note("", "","");
     this.nt.title = value1;
     this.nt.text = value2;
+    this.nt.description = value3;
     console.log(this.nt.title, typeof(this.nt.title));
     console.log(this.nt.text);
-    if (!this.nt.title && !this.nt.text) {
+    console.log(this.nt.description);
+    if (!this.nt.title && !this.nt.text && !this.nt.description) {
      this.errMessage = 'Title and Text both are required fields';
      console.log(this.errMessage);
    }
@@ -68,6 +70,17 @@ export class HomepageComponent implements OnInit {
     });
 
   }
+  options = ["Art", "Comedy", "Science","Fiction"];
+optionSelected: any;
+
+onOptionsSelected(event: any){
+ console.log(event); //option value will be sent as event
+ this.http.categoriesbook(event).subscribe((response:any)=>{
+    this.details=response.items;
+    console.log(this.details);
+  });
+
+}
 
   
 

@@ -59,6 +59,7 @@
 
 <div class="card bg-transparent" style="--bs-bg-opacity:0;" >
   <div class="details"  *ngFor="let t of details">
+
     <img [src]="t.volumeInfo.imageLinks&&t.volumeInfo.imageLinks.smallThumbnail" alt="Card image cap" class="card-img-top" >
     <div class="card-body">
       <h2 class="card-title">{{ t.volumeInfo.title }}</h2>
@@ -79,7 +80,7 @@
         <a href="{{ t.volumeInfo.previewLink }}" mat-stroked-button color="primary" target="_blank">Read More</a>  
         <br>
         <br>
-        <a mat-stroked-button color="primary" (click)="addFav(t.volumeInfo.title,t.volumeInfo.imageLinks&&t.volumeInfo.imageLinks.smallThumbnail)">Add to Fav</a>               
+        <a mat-stroked-button color="primary" (click)="addFav(t.volumeInfo.title,t.volumeInfo.imageLinks&&t.volumeInfo.imageLinks.smallThumbnail,t.volumeInfo.description)">Add to Fav</a>               
      
                </mat-expansion-panel>
     </mat-accordion>   
@@ -117,16 +118,11 @@
         <li><a class="dropdown-item" href="#">Horror</a></li>
       </ul>
     </div> -->
-    <form class="dropdown mt-3" (ngSubmit)="sumbitForm(myForm.value)" #myForm="ngForm">
-      <span class="navbar-brand mb-0 h1 "> Book Categories:</span>
-        <select class="form-control me-2 dropdown-item  mb-0 h1" name="list" id="" ngModel >
-        <option class="form-control me-2 dropdown-item  mb-0 h1" value="cat1">Art</option>
-        <option class="form-control me-2 dropdown-item  mb-0 h1" value="cat2">Fiction</option>
-        <option class="form-control me-2 dropdown-item  mb-0 h1" value="cat3">Science</option>
-      </select>
-      <br>
-        <button class="btn btn-outline-success mr-2" type="submit">Submit</button><br/>
-      </form>   
+    <span class="navbar-brand mb-0 h1 "> Book Categories:</span>
+<select class='select-option form-control me-2 dropdown-item  mb-0 h1' required [(ngModel)]='optionSelected' (ngModelChange)='onOptionsSelected($event) '>
+  <option class='option form-control me-2 dropdown-item  mb-0 h1' *ngFor='let option of options' [value]="option">{{option}}</option>
+</select>
+  
   </div>
 </div>
 
