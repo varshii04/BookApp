@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 //import { throws } from 'assert';
 //import { Observable } from 'rxjs/Observable';
 import { Observable } from 'rxjs';
@@ -10,20 +10,23 @@ import { Note } from './note';
   providedIn: 'root'
 })
 export class NotesService {
-  private url = 'http://localhost:3000/notes';
-  constructor(private http:HttpClient,) { }
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type':  'application/json',
-      Authorization: 'my-auth-token'
-    })
-  };
+  //private url = 'http://localhost:27017/api/addBook';
+  private postUrl = 'http://localhost:8091/addBook';
+  private getUrl = 'http://localhost:8091/findAllBooks';
+  constructor(private _http: HttpClient) { }
+  // constructor(private http:HttpClient,) { }
+  // httpOptions = {
+  //   headers: new HttpHeaders({
+  //     'Content-Type':  'application/json',
+  //     Authorization: 'my-auth-token'
+  //   })
+  // };
   getNotes(): Observable<Array<Note>> {
-    return this.http.get<Note[]>(this.url);
+    return this._http.get<Note[]>(this.getUrl);
   }
 
   addNote(n: Note): Observable<Note> {
-    return this.http.post<Note>(this.url, n, this.httpOptions);
+    return this._http.post<Note>(this.postUrl, n);
 
   }
 
