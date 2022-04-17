@@ -32,10 +32,10 @@ export class DataserviceService {
 }
 public loginUserFromRemote(user:User):Observable<any>{
   
-  return this._http.post<any>("http://localhost:8091/login", user)
+  return this._http.post<any>("http://localhost:7091/login", user)
 }
 public registerUserFromRemote(register:Register):Observable<any>{
-  return this._http.post<any>("http://localhost:8091/registeruser",register)
+  return this._http.post<any>("http://localhost:7091/registeruser",register)
 }
 
 // public addFavList(favourite:Favourite):Observable<any>{

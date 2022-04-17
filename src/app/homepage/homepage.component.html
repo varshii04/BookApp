@@ -1,14 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-light py-3" style="background-color:rgb(248, 194, 128)">
-  <div class="container-fluid">
-    <a class="navbar-brand mr-6"> <span class="material-icons mr-2 d-inline-block align-text-top">menu_book</span >Scholastic Book Store </a>
-   
+
+  <nav class="navbar navbar-expand-lg navbar-light py-3" style="background-color:rgb(248, 194, 128); position: fixed;top: 0;
+width: 100%; Z-index: 100">
+    <div class="container-fluid">
+      <a class="navbar-brand mr-6"> <span
+          class="material-icons mr-2 d-inline-block align-text-top">menu_book</span>Scholastic Book Store </a>
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-     
-        
+
+
         <ul class="nav nav-tabs">
-         
+
           <li class="nav-item">
-            <a class="nav-link active" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <a class="nav-link active" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+              aria-controls="offcanvasExample">
               <span class="navbar-brand mb-0 h1">More</span>
             </a>
           </li>
@@ -16,27 +20,31 @@
 
 
 
-      
+
+      </div>
+      <form class="d-flex">
+        <button class="btn btn-outline-dark mr-2" routerLink="/login-component"
+          routerLinkActive="active">Login</button>
+        <button class="btn btn-outline-dark mr-2" routerLink="/registration-component" routerLinkActive="active">Sign
+          Up</button>
+        <button class="btn btn-outline-dark mr-2" routerLink="/login-component"
+          routerLinkActive="active">Logout</button>
+
+        <input class="form-control me-2" id="username" name="username" #username type="search"
+          placeholder="Search any book!" aria-label="Search">
+        <button class="btn btn-outline-dark" type="submit" (click)="onsearch(username.value)">Search</button>
+
+
+      </form>
+
+
+
+
+
+
+
+
     </div>
-    <form class="d-flex">
-      <button class="btn btn-outline-success mr-2"  routerLink="/login-component" routerLinkActive="active">Login</button>
-      <button class="btn btn-outline-success mr-2"  routerLink="/registration-component" routerLinkActive="active">Sign Up</button>  
-      <button class="btn btn-outline-success mr-2"  routerLink="/login-component" routerLinkActive="active">Logout</button>
-
-      <input class="form-control me-2" id="username" name="username" #username type="search" placeholder="Search any book!" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit" (click)="onsearch(username.value)">Search</button>
-
-      
-    </form>
-
-    
-
-
-
-
-
-
-  </div>
 
 
 
@@ -52,63 +60,62 @@
 
 
 
-  
-</nav>
-<!-- Background image -->
-<div class="bgSizeCover">
 
-<div class="card bg-transparent" style="--bs-bg-opacity:0;" >
-  <div class="details"  *ngFor="let t of details">
+  </nav>
+  <!-- Background image -->
+  <div class="bgSizeCover" >
 
-    <img [src]="t.volumeInfo.imageLinks&&t.volumeInfo.imageLinks.smallThumbnail" alt="Card image cap" class="card-img-top" >
-    <div class="card-body">
-      <h2 class="card-title">{{ t.volumeInfo.title }}</h2>
-    <mat-accordion>
-      <mat-expansion-panel (opened)="panelOpenState = true"
-      (closed)="panelOpenState = false">
-        <mat-expansion-panel-header>
-          
-          <mat-panel-description>
-            {{ t.volumeInfo.authors }}
+    <div class="card bg-transparent" style="--bs-bg-opacity:0;">
+      <div class="details" *ngFor="let t of details">
 
-          
+        <img [src]="t.volumeInfo.imageLinks&&t.volumeInfo.imageLinks.smallThumbnail" alt="Card image cap"
+          class="card-img-top">
+        <div class="card-body">
+          <h2 class="card-title">{{ t.volumeInfo.title }}</h2>
+          <mat-accordion class="accord">
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+
+                <mat-panel-description>
+                  {{ t.volumeInfo.authors }}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+
+              <a href="{{ t.volumeInfo.previewLink }}" mat-stroked-button color="primary" target="_blank">Read More</a>
+              <br>
+              <br>
+              <a mat-stroked-button color="primary"
+                (click)="addFav(t.volumeInfo.title,t.volumeInfo.imageLinks&&t.volumeInfo.imageLinks.smallThumbnail,t.volumeInfo.description,t.volumeInfo.previewLink)">Add
+                to Fav</a>
+
+            </mat-expansion-panel>
+          </mat-accordion>
 
 
-     </mat-panel-description>
-        </mat-expansion-panel-header>
-        
-        <a href="{{ t.volumeInfo.previewLink }}" mat-stroked-button color="primary" target="_blank">Read More</a>  
+
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h2 class="offcanvas-title" id="offcanvasExampleLabel">Hello</h2>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+
+        <a class="btn btn-secondary" aria-current="page" routerLink="/book" routerLinkActive="active"> <span
+            class="navbar-brand mb-0 h1">View Favourites</span></a>
+
         <br>
         <br>
-        <a mat-stroked-button color="primary" (click)="addFav(t.volumeInfo.title,t.volumeInfo.imageLinks&&t.volumeInfo.imageLinks.smallThumbnail,t.volumeInfo.description)">Add to Fav</a>               
-     
-               </mat-expansion-panel>
-    </mat-accordion>   
-    
 
-
-    
-  </div>
-
-  
-  </div>
-</div>
-
-
-
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-  <div class="offcanvas-header">
-    <h2 class="offcanvas-title" id="offcanvasExampleLabel">Hello</h2>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    
-    <a class="btn btn-secondary" aria-current="page" routerLink="/book" routerLinkActive="active"> <span class="navbar-brand mb-0 h1">View Favourites</span></a>
-
-<br>
-<br>
-
-    <!-- <div class="dropdown mt-3">
+        <!-- <div class="dropdown mt-3">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
         <span class="navbar-brand mb-0 h1">  Search by categories</span>
       </button>
@@ -118,20 +125,21 @@
         <li><a class="dropdown-item" href="#">Horror</a></li>
       </ul>
     </div> -->
-    <span class="navbar-brand mb-0 h1 "> Book Categories:</span>
-<select class='select-option form-control me-2 dropdown-item  mb-0 h1' required [(ngModel)]='optionSelected' (ngModelChange)='onOptionsSelected($event) '>
-  <option class='option form-control me-2 dropdown-item  mb-0 h1' *ngFor='let option of options' [value]="option">{{option}}</option>
-</select>
-  
+        <span class="navbar-brand mb-0 h1 "> Book Categories:</span>
+        <select class='select-option form-control me-2 dropdown-item  mb-0 h1' required [(ngModel)]='optionSelected'
+          (ngModelChange)='onOptionsSelected($event) '>
+          <option class='option form-control me-2 dropdown-item  mb-0 h1' *ngFor='let option of options'
+            [value]="option">{{option}}</option>
+        </select>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
   </div>
-</div>
-
-
-
-
-
-
-
-
-</div>
-

@@ -2,21 +2,21 @@
 
   .card{
     width: 35%;
-    margin-left: 25rem;
+    margin-left: 17rem;
     margin-top: 25px;
     display: grid;
     grid-template-columns: repeat(3,minmax(200px,0.5fr));
-    grid-gap: 40px;
+    grid-gap: 60px;
     box-sizing: border-box;
     border-style: hidden;
     
   }
   .bgSizeCover{
     background-color:bisque;
-   background-size: cover;
-    
+    background-size: cover;
     resize: both;
     overflow: scroll;
+    margin-top: 4rem;
   }
  
   select {
@@ -28,6 +28,12 @@
     border-radius: 5px;
     box-shadow: 1px 1px 2px rgb(218, 137, 137);
     background: #eee;
+  }
+  .details{
+    size: 200px;
+  }
+  .accord{
+    margin-bottom: auto; 
   }
 
     

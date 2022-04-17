@@ -11,8 +11,8 @@ import { Note } from './note';
 })
 export class NotesService {
   //private url = 'http://localhost:27017/api/addBook';
-  private postUrl = 'http://localhost:8091/addBook';
-  private getUrl = 'http://localhost:8091/findAllBooks';
+  private postUrl = 'http://localhost:7091/addBook';
+  private getUrl = 'http://localhost:7091/findAllBooks';
   constructor(private _http: HttpClient) { }
   // constructor(private http:HttpClient,) { }
   // httpOptions = {
