@@ -186,6 +186,12 @@ body {
 .wrapper a:hover {
     color: #039BE5
 }
+label{
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: initial;
+}
+
 
 @media(max-width: 380px) {
     .wrapper {

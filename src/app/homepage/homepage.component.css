@@ -1,8 +1,9 @@
-
+/* 
 
   .card{
-    width: 35%;
-    margin-left: 17rem;
+    width: 50%;
+    margin:auto;
+    margin-left: 15rem;
     margin-top: 25px;
     display: grid;
     grid-template-columns: repeat(3,minmax(200px,0.5fr));
@@ -34,9 +35,76 @@
   }
   .accord{
     margin-bottom: auto; 
-  }
+  } */
 
+  .card{
+    width: 35%;
+    margin-left: 17rem;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3,minmax(200px,0.5fr));
+    grid-gap: 60px;
+    box-sizing: border-box;
+    border-style:hidden;
     
+    
+  }
+  .bgSizeCover{
+    background-color:bisque;
+    background-size: cover;
+    resize: both;
+    overflow: scroll;
+    margin-top: 4rem;
+    
+  }
+ 
+  select {
+    height: 30px;
+    width: 150px;
+    outline: none;
+    color: #74646e;
+    border: 1px solid rgb(7, 7, 7);
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgb(218, 137, 137);
+    background: #eee;
+  }
+  .details{
+    size: 200px;
+  }
+  .accord{
+    margin-bottom: auto; 
+  }
+  .card-title{
+    text-align: center;
+  }
+.card-subtitle{
+  text-align: center;
+}
+.box {
+  margin: 50px auto;
+  background: #5FCF80;
+  width: 150px;
+  height: 150px;
+}
+.box:hover {
+  transform: rotate(360deg);
+  background: #9351A6;
+  border-radius: 50%;
+}
+.rotate {
+  transition: all 0.5s ease-in-out;
+}
+.rotate:hover {
+  transition: all 1s ease-in-out;
+}
+.icon1:hover{
+  color: #5FCF80;
+
+
+}
+.icon1::after{
+  color: violet;
+}
 
  
     
