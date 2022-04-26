@@ -136,7 +136,7 @@ body {
     min-height: 500px;
     margin: 80px auto;
     padding: 40px 30px 30px 30px;
-    background-color: #ecf0f3;
+    background-color:  #aeb19e84;
     border-radius: 15px;
     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff
 }
@@ -188,7 +188,7 @@ body {
     box-shadow: none;
     width: 100%;
     height: 40px;
-    background-color: #03A9F4;
+    background-color: #d4d3b3b9;
     color: #fff;
     border-radius: 25px;
     box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
@@ -196,7 +196,7 @@ body {
 }
 
 .wrapper .btn:hover {
-    background-color: #039BE5
+    background-color: #889fab
 }
 
 .wrapper a {
@@ -207,6 +207,15 @@ body {
 
 .wrapper a:hover {
     color: #039BE5
+}
+.backpage{
+    background-image: url("https://images.pexels.com/photos/1850021/pexels-photo-1850021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    overflow: scroll;
+    height: 100%;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  resize: none; 
 }
 
 @media(max-width: 380px) {

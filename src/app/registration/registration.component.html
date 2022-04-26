@@ -75,14 +75,14 @@
 
   </form> -->
 
-
+<div class="backpage">
    <div class="container">
     <div class="wrapper" >
-      <p class="h4 mb-4">Sign up</p>
+      <p class="h2 mb-4">Sign Up</p>
           
     <form class="text-center border border-light p-5" #registrationform="ngForm" (ngSubmit)="registerUser(registrationform)">
       <div class = "form-group">
-        <label for="email">Email:</label>
+        <!-- <label for="email">Email:</label> -->
         <input type="email" class="form-control" id = "email" placeholder="Enter email" name = "email" [(ngModel)]="register.email" #email="ngModel" required
         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
         [class.is-invalid]="email.invalid && email.touched"
@@ -94,8 +94,9 @@
         </div>
   
       </div>
+      <br>
       <div class = "form-group">
-        <label for="name">Name:</label>
+        <!-- <label for="name">Name:</label> -->
         <input type="name" class="form-control" id = "name" placeholder="Enter name" name = "name" [(ngModel)]="register.name" #name="ngModel" required
         pattern="[A-Za-z]{1,32}"
         [class.is-invalid]="name.invalid && name.touched"
@@ -106,8 +107,9 @@
           <small class="text-danger" *ngIf="name.errors?.['pattern']">enter the valid name</small>
         </div>
       </div>
+      <br>
       <div class = "form-group">
-        <label for="phone">phone no:</label>
+        <!-- <label for="phone">phone no:</label> -->
         <input type="phone" class="form-control" id = "phone" placeholder="Enter phone" name = "phone" [(ngModel)]="register.phone" #phone="ngModel" required
         pattern="[789][0-9]{9}"
         [class.is-invalid]="phone.invalid && phone.touched"
@@ -118,8 +120,9 @@
           <small class="text-danger" *ngIf="phone.errors?.['pattern']">enter the valid phone</small>
         </div>
       </div>
+      <br>
       <div class = "form-group">
-        <label for="pwd">Password:</label>
+        <!-- <label for="pwd">Password:</label> -->
         <input type="password" class="form-control" id = "pwd" placeholder="Enter password" name = "password" [(ngModel)]="register.password" #password="ngModel" required
         
         [class.is-invalid]="password.invalid && password.touched"
@@ -130,6 +133,7 @@
           <small class="text-danger" *ngIf="password.errors?.['pattern']">enter the valid password</small>
         </div> -->
       </div>
+      <br>
       <div class = "checkbox">
         <label><input type = "checkbox" name = "remember"> Remember me</label>
       </div>
@@ -141,3 +145,4 @@
     </form>
   </div>  
    </div>
+  </div>

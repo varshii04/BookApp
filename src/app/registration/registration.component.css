@@ -101,8 +101,10 @@ body {
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    color: 'grey';
+    box-sizing: border-box; 
     font-family: 'Poppins', sans-serif
+    
 }
 
 body {
@@ -114,9 +116,9 @@ body {
     min-height: 500px;
     margin: 80px auto;
     padding: 40px 30px 30px 30px;
-    background-color: #ecf0f3;
+    background-color: #aeb19e84;
     border-radius: 15px;
-    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff
+    /* box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff */
 }
 
 .logo {
@@ -166,15 +168,15 @@ body {
     box-shadow: none;
     width: 100%;
     height: 40px;
-    background-color: #03A9F4;
+    background-color: burlywood;
     color: #fff;
     border-radius: 25px;
-    box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+    /* box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff; */
     letter-spacing: 1.3px
 }
 
 .wrapper .btn:hover {
-    background-color: #039BE5
+    background-color: green
 }
 
 .wrapper a {
@@ -190,8 +192,18 @@ label{
     font-size: large;
     font-family: 'Times New Roman', Times, serif;
     font-style: initial;
+    font-weight: bolder;
 }
-
+.backpage{
+ background-image: url("https://images.pexels.com/photos/2177482/pexels-photo-2177482.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    overflow: scroll;
+    height: 100%;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  resize: none; 
+ 
+}
 
 @media(max-width: 380px) {
     .wrapper {

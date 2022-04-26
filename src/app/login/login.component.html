@@ -21,15 +21,15 @@
           </div>
       </div>
         </form> -->
-
+        <div class="backpage">
         <div class="container">
           <div class="wrapper" >
-            <p class="h4 mb-4">Login</p>
+            <p class="h2 mb-4" style="color:white">Login</p>
           <form #loginform="ngForm" (ngSubmit)="loginUser(loginform)">
             <small class="text-danger">{{msg}}</small>
             <small class="text-danger">{{msg1}}</small>
             <div class = "form-group">
-              <label for="email">Email:</label>
+              <!-- <label for="email">Email:</label> -->
               <input type="email" class="form-control" id = "email" placeholder="Enter email" name = "email" [(ngModel)]="user.email"  #email="ngModel" required
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               [class.is-invalid]="email.invalid && email.touched"
@@ -48,8 +48,9 @@
                 </div>
                 <div class="alert-danger" *ngIf="email.errors?.['pattern']">email id invalid</div>
               </div> -->
+              <br>
             <div class = "form-group">
-              <label for="pwd">Password:</label>
+              <!-- <label for="pwd">Password:</label> -->
               <input type="password" class="form-control" id = "pwd" placeholder="Enter password" name = "password" [(ngModel)]="user.password" #password="ngModel" required
               pattern="^(?=.?[A-Z])(?=.?[a-z])(?=.?[0-9])(?=.?[#?!@$ %^&*-]).{8,}$" 
               [class.is-invalid]="password.invalid && password.touched"
@@ -60,10 +61,12 @@
                 <!-- <small class="text-danger" *ngIf="password.errors?.['pattern']">enter the valid password</small> -->
               </div>
             </div>
+            <br>
             <div class = "checkbox">
               <input type = "checkbox" name = "remember">
-              <label> Remember me</label>
+              <label style="color:white"> Remember me</label>
             </div>
+            <br>
             <div class="row" style="margin-top:auto">
               <button type="submit" class = "btn btn-info mr-2"  >Login</button> 
               <br>
@@ -77,6 +80,7 @@
           </form>
         </div> 
         </div> 
+        </div>
         <!-- <div class="container">
 
           <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm)">

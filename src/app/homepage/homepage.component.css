@@ -43,20 +43,60 @@
     margin-top: 25px;
     display: grid;
     grid-template-columns: repeat(3,minmax(200px,0.5fr));
-    grid-gap: 60px;
+    grid-gap: 80px;
     box-sizing: border-box;
     border-style:hidden;
     
     
   }
   .bgSizeCover{
-    background-color:bisque;
-    background-size: cover;
+    /* background-image: url("https://i.pinimg.com/1200x/05/e3/96/05e3969e509f6a2cdd0e591206c4850e.jpg"); */
+    background-color:rgba(211, 211, 211, 0.826);
+    /*background-size: cover;
     resize: both;
     overflow: scroll;
     margin-top: 4rem;
+     */
+     
+    overflow: scroll;
+    height: 100%;
+    background-position:initial;
+    
+  background-repeat: repeat;
+  background-size:contain;
+  resize: both; 
+  }
+  .asdsd{
+    font-size:x-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: initial;
+    color: azure;
+  
+  }
+  .offcanvas-start
+  {
+    transition-duration: 1s;
+    border-color: rgb(41, 138, 0);
+    border-width:1ex;
+    background-color: bisque;
+    box-shadow: #cf5f5f;
     
   }
+  .offcanvas-title{
+    font-size:xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: initial;
+    color: azure;
+  
+  }
+  .btn-secondary{
+    font-size:xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: initial;
+    color: azure;
+  
+  }
+  
  
   select {
     height: 30px;
@@ -105,6 +145,4 @@
 .icon1::after{
   color: violet;
 }
-
- 
     
