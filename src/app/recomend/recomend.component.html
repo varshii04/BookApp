@@ -1,0 +1,51 @@
+<div style="background-color:lightgray">
+    <nav class="navbar navbar-expand-lg navbar-light py-3" style="background-color:#ffff00; position: fixed;top: 0;
+    width: 100%">
+    
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand mr-6"> <span class="material-icons mr-2 d-inline-block align-text-top">menu_book</span >Scholastic Book Store </a> -->
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav nav-tabs">
+  
+          <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+              aria-controls="offcanvasExample">
+              <span class="navbar-brand mb-0 h1">  journey of your Recomendations</span>
+              
+            </a>
+            
+          </li>
+        </ul>
+      </div>
+      <form class="d-flex">
+        <button class="btn btn-outline-success mr-2" routerLink="/homepage-component" routerLinkActive="active">
+          Home</button>
+      </form>
+    </div>
+  </nav>
+  
+  <div >
+    <br>
+    <br>
+    <h1> journey of your Recomendations</h1>
+    <!-- <h1>Favourite list <button type="submit" class = "btn btn-info" routerLink="/homepage-component" routerLinkActive="active" >Back to Home</button></h1> -->
+    <div class="text-center" >
+      <ul *ngFor="let n of nts">
+        <li *ngIf="n.title">
+          <div>
+  
+            <div class="example-header-image"></div>
+            <b><h2>{{n.title}}</h2></b>
+            <img src="{{n.text}}" alt={{n.title}}>
+            <div>{{ (n.description | slice:0:250)+'....' }}</div> 
+            
+            <!-- <div>{{n.description}}</div> -->
+            <a href="{{ n.previewlink }}" mat-stroked-button color="primary" target="_blank">Read More</a>
+  
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>

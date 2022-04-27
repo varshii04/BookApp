@@ -63,6 +63,23 @@ export class HomepageComponent implements OnInit {
     this.ntservice.addNote(this.nt).subscribe((data => this.note = data), (error => this.errMessage = error.message));
     
    }
+   public addRec(value1: string, value2: string,value3:string, value4:string) {
+    this.nt = new Note("", "","","");
+    this.nt.title = value1;
+    this.nt.text = value2;
+    this.nt.description = value3;
+    this.nt.previewlink= value4;
+    console.log(this.nt.title, typeof(this.nt.title));
+    console.log(this.nt.text);
+    console.log(this.nt.description);
+    if (!this.nt.title && !this.nt.text && !this.nt.description && !this.nt.previewlink) {
+     this.errMessage = 'Title and Text both are required fields';
+     console.log(this.errMessage);
+   }
+    this.ntservice.addNote1(this.nt).subscribe((data => this.note = data), (error => this.errMessage = error.message));
+    
+   }
+
    sumbitForm(form:any) {
   
     this.http.categoriesbook(form).subscribe((response:any)=>{

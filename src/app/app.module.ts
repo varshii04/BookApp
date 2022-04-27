@@ -17,6 +17,7 @@ import { BookComponent } from './book/book.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { NotesService } from './notes.service';
 import {MatCardModule} from '@angular/material/card';
+import { RecomendComponent } from './recomend/recomend.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {MatCardModule} from '@angular/material/card';
     LoginComponent,
     HomepageComponent,
     RegistrationComponent,
-    BookComponent
+    BookComponent,
+    RecomendComponent
   ],
   imports: [
     BrowserModule,

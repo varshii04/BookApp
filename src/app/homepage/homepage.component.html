@@ -102,9 +102,13 @@
                   <div class="next">
                       <button type="button" class="btn btn-default btn-lg" (click)="addFav(t.volumeInfo.title,t.volumeInfo.imageLinks&&t.volumeInfo.imageLinks.smallThumbnail,t.volumeInfo.description,t.volumeInfo.previewLink)">
                           <mat-icon class="icon1">star</mat-icon>
-
                       </button>
                   </div>
+              </div>
+              <div>
+                <button type="button" class="btn btn-default btn-lg" (click)="addRec(t.volumeInfo.title,t.volumeInfo.imageLinks&&t.volumeInfo.imageLinks.smallThumbnail,t.volumeInfo.description,t.volumeInfo.previewLink)">
+                  <mat-icon class="icon1">diamond</mat-icon>
+                </button>
               </div>
           </div>
 
@@ -166,6 +170,11 @@
   
           <br>
           <br>
+          <a class="btn btn-secondary" aria-current="page" routerLink="/recomend" routerLinkActive="active"> <span
+            class="navbar-brand mb-0 h1">View Recomendations</span></a>
+
+        <br>
+        <br>
   
           
           <span class="navbar-brand mb-0 h1 "> Book Categories:</span>
