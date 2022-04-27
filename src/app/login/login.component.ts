@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
       this._router.navigate(['/homepage-component'])},
       _error => {
       console.log("excepton occured");
-      this.msg="Bad credentials";
+      this.msg="Bad credentials!!!!!!";
       this.msg1="please enter correct email and password";
     }
     )

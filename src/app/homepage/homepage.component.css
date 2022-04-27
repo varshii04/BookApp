@@ -1,148 +1,171 @@
-/* 
+.card{
+  width: 35%;
+  margin-left: 17rem;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(3,minmax(200px,0.5fr));
+  grid-gap: 60px;
+  box-sizing: border-box;
+  border-style:hidden;
+  
+  
+}
+.navbar-brand{
+  text-align: right;
+  align-items: flex-end;
+}
+.bgSizeCover{
+  background-color:rgba(211, 211, 211, 0.826);
+  background-size: cover;
+  resize: both;
+  overflow: scroll;
+  margin-top: 1rem;
+  
+}
 
-  .card{
-    width: 50%;
-    margin:auto;
-    margin-left: 15rem;
-    margin-top: 25px;
-    display: grid;
-    grid-template-columns: repeat(3,minmax(200px,0.5fr));
-    grid-gap: 60px;
-    box-sizing: border-box;
-    border-style: hidden;
-    
-  }
-  .bgSizeCover{
-    background-color:bisque;
-    background-size: cover;
-    resize: both;
-    overflow: scroll;
-    margin-top: 4rem;
-  }
- 
-  select {
-    height: 30px;
-    width: 150px;
-    outline: none;
-    color: #74646e;
-    border: 1px solid rgb(7, 7, 7);
-    border-radius: 5px;
-    box-shadow: 1px 1px 2px rgb(218, 137, 137);
-    background: #eee;
-  }
-  .details{
-    size: 200px;
-  }
-  .accord{
-    margin-bottom: auto; 
-  } */
-
-  .card{
-    width: 35%;
-    margin-left: 17rem;
-    margin-top: 25px;
-    display: grid;
-    grid-template-columns: repeat(3,minmax(200px,0.5fr));
-    grid-gap: 80px;
-    box-sizing: border-box;
-    border-style:hidden;
-    
-    
-  }
-  .bgSizeCover{
-    /* background-image: url("https://i.pinimg.com/1200x/05/e3/96/05e3969e509f6a2cdd0e591206c4850e.jpg"); */
-    background-color:rgba(211, 211, 211, 0.826);
-    /*background-size: cover;
-    resize: both;
-    overflow: scroll;
-    margin-top: 4rem;
-     */
-     
-    overflow: scroll;
-    height: 100%;
-    background-position:initial;
-    
-  background-repeat: repeat;
-  background-size:contain;
-  resize: both; 
-  }
-  .asdsd{
-    font-size:x-large;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: initial;
-    color: azure;
-  
-  }
-  .offcanvas-start
-  {
-    transition-duration: 1s;
-    border-color: rgb(41, 138, 0);
-    border-width:1ex;
-    background-color: bisque;
-    box-shadow: #cf5f5f;
-    
-  }
-  .offcanvas-title{
-    font-size:xx-large;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: initial;
-    color: azure;
-  
-  }
-  .btn-secondary{
-    font-size:xx-large;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: initial;
-    color: azure;
-  
-  }
-  
- 
-  select {
-    height: 30px;
-    width: 150px;
-    outline: none;
-    color: #74646e;
-    border: 1px solid rgb(7, 7, 7);
-    border-radius: 5px;
-    box-shadow: 1px 1px 2px rgb(218, 137, 137);
-    background: #eee;
-  }
-  .details{
-    size: 200px;
-  }
-  .accord{
-    margin-bottom: auto; 
-  }
-  .card-title{
-    text-align: center;
-  }
-.card-subtitle{
+select {
+  height: 30px;
+  width: 150px;
+  outline: none;
+  color: #74646e;
+  border: 1px solid rgb(7, 7, 7);
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px rgb(218, 137, 137);
+  background: #eee;
+}
+.details{
+  size: 200px;
+}
+.accord{
+  margin-bottom: auto; 
+}
+.card-title{
   text-align: center;
 }
+.card-subtitle{
+text-align: center;
+}
 .box {
-  margin: 50px auto;
-  background: #5FCF80;
-  width: 150px;
-  height: 150px;
+margin: 50px auto;
+background: #5FCF80;
+width: 150px;
+height: 150px;
 }
 .box:hover {
-  transform: rotate(360deg);
-  background: #9351A6;
-  border-radius: 50%;
+transform: rotate(360deg);
+background: #9351A6;
+border-radius: 50%;
 }
 .rotate {
-  transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
 }
 .rotate:hover {
-  transition: all 1s ease-in-out;
+transition: all 1s ease-in-out;
 }
 .icon1:hover{
-  color: #5FCF80;
+color: #5FCF80;
 
 
 }
 .icon1::after{
-  color: violet;
+color: violet;
 }
-    
+/* .offcanvas-start
+{
+transition-duration: 1s;
+border-color: rgb(41, 138, 0);
+border-width:1ex;
+background-color: rgb(103, 150, 194);
+box-shadow: #cf5f5f;
+
+}
+.offcanvas-title{
+font-size:xx-large;
+font-family: 'Times New Roman', Times, serif;
+font-style: initial;
+color: azure;
+
+}
+.btn-secondary{
+font-size:xx-large;
+font-family: 'Times New Roman', Times, serif;
+font-style: initial;
+color: azure;
+
+} */
+.sidebar-nav ul li a {
+font-size: 26px;
+text-decoration: none;
+display: block;
+padding: 6px 10px;
+transition: 0.5s;
+color: blue;
+}
+.sidebar-nav ul li a:hover {
+background-color: #eeeeee;
+border-radius: 4px;
+}
+.sidebar-nav .offcanvas {
+width: 220px;
+border: none;
+}
+.sidebar-nav .offcanvas ul li a span {
+font-size: 18px;
+position: relative;
+top: -4px;
+transition: 0.5s;
+}
+.sidebar-nav .offcanvas.show ul li a:hover span {
+padding-left: 10px;
+}
+.sidebar-nav .dropdown-toggle::after {
+position: relative;
+top: 3px;
+}
+.bi::before, [class^="bi-"]::before, [class*=" bi-"]::before
+{
+margin-right: 5px;
+}
+
+
+
+.asdsd{
+font-size:x-large;
+font-family: 'Times New Roman', Times, serif;
+font-style: initial;
+color: azure;
+
+}
+.offcanvas-body{
+  transition-duration: 1s;
+border-color: rgb(41, 138, 0);
+border-width:1ex;
+background-color: rgb(186, 194, 103);
+box-shadow: #cf5f5f;
+}
+.dropdown-item1{
+color: black;
+font-weight: bolder;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 26px;
+text-decoration:dashed;
+display: block;
+padding: 6px 10px;
+transition: 0.5s;
+
+}
+.icon2:hover{
+  color: orange;
+
+
+}
+.icon2::after{
+  color: blue;
+}
+.offcanvas-header{
+  transition-duration: 1s;
+border-color: rgb(41, 138, 0);
+border-width:1ex;
+background-color: rgb(186, 194, 103);
+box-shadow: #cf5f5f;
+}
